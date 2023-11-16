@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Your Page Title</title>
+    <style>
+        /* @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"); */
+        @import url("https://fonts.googleapis.com/css?family=Montserrat:700,400");
+
+        * {
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0px;
+            height: 100%;
+            background-color: rgba(37, 43, 66, 1);
+            font-family: "Montserrat-Bold", Helvetica;
+        }
+
+        /* a blue color as a generic focus style */
+        button:focus-visible {
+            outline: 2px solid #4a90e2 !important;
+            outline: -webkit-focus-ring-color auto 5px !important;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .navbar-style {
+            height: 91px;
+        }
+
+        .navbar-brand {
+            position: absolute;
+            top: 17px;
+            left: 136px;
+        }
+
+        .text-wrapper {
+            position: absolute;
+            top: 12px;
+            left: 0;
+            font-family: "Montserrat-Bold", Helvetica;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 1);
+            font-size: 24px;
+            letter-spacing: 0.10000000149011612px;
+        }
+
+        /* .header .navbar-toggler {
+            position: absolute;
+            width: 24px;
+            height: 14px;
+            top: 39px;
+            left: 1298px;
+        } */
+
+        .collapse-navbar {
+            position: absolute;
+            top: 16px;
+            left: 364px;
+        }
+
+        .header .navbar-nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 21px;
+            position: absolute;
+            top: 17px;
+            left: 0;
+        }
+
+        .header .li {
+            position: relative;
+            width: 43px;
+            height: 24px;
+        }
+
+        .header .a {
+            position: relative;
+            height: 24px;
+        }
+
+        .header .link {
+            position: absolute;
+            top: -1px;
+            left: 0;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 1);
+            font-size: 14px;
+            text-align: center;
+            letter-spacing: 0.20000000298023224px;
+            line-height: 24px;
+            white-space: nowrap;
+            font-style: normal;
+        }
+
+        .header .a-wrapper {
+            width: 59px;
+            position: relative;
+            height: 24px;
+        }
+
+        .header .div-wrapper {
+            width: 52px;
+            position: relative;
+            height: 24px;
+        }
+
+        .header .div {
+            width: 58px;
+            position: relative;
+            height: 24px;
+        }
+
+        .header .navbar-nav-2 {
+            display: inline-flex;
+            align-items: center;
+            gap: 45px;
+            position: absolute;
+            top: 3px;
+            left: 515px;
+        }
+
+        .nav-item {
+            color: whitesmoke;
+            position: relative;
+            width: 41px;
+            height: 22px;
+        }
+
+        .header .btn-text-wrapper {
+            position: relative;
+            height: 22px;
+            all: unset;
+            box-sizing: border-box;
+        }
+
+        .header .btn-text {
+            position: absolute;
+            top: -1px;
+            left: 0;
+            font-family: "Montserrat-Bold", Helvetica;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 1);
+            font-size: 14px;
+            text-align: right;
+            letter-spacing: 0.20000000298023224px;
+            line-height: 22px;
+            white-space: nowrap;
+            font-style: normal;
+            all: unset;
+            box-sizing: border-box;
+        }
+
+        .header .button-btn-primary-wrapper {
+            position: relative;
+            width: 214px;
+            height: 52px;
+        }
+
+        .header .button-btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 25px;
+            position: relative;
+            background-color: rgba(35, 166, 240, 1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .header .btn-text-2 {
+            color: rgba(255, 255, 255, 1);
+            position: relative;
+            width: fit-content;
+            margin-top: -1px;
+            font-family: "Montserrat-Bold", Helvetica;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.20000000298023224px;
+            line-height: 22px;
+            white-space: nowrap;
+            font-style: normal;
+        }
+
+        .header .icn-arrow-right-icn {
+            position: relative;
+            width: 12px;
+            height: 10px;
+        }
+
+        .header .container-2 {
+            display: flex;
+            flex-direction: column;
+            /* width: 1046px; */
+            align-items: center;
+            gap: 80px;
+            padding: 80px 0px;
+            position: absolute;
+            /* top: 104px; */
+            left: 150px;
+        }
+
+        /* .header .row {
+            display: flex;
+            flex-direction: column;
+            width: 701px;
+            align-items: center;
+            position: relative;
+            flex: 0 0 auto;
+        } */
+
+        .header .main-content {
+            display: flex;
+            flex-direction: column;
+            /* width: 699px; */
+            align-items: center;
+            /* gap: 40px;
+            padding: 40px 0px;
+            position: relative;
+            flex: 0 0 auto; */
+        }
+
+        .header .header-tag {
+            /* position: relative;
+            width: fit-content; */
+            /* margin-top: -1px; */
+            margin-bottom: -30px;
+            font-family: "Montserrat-Bold", Helvetica;
+            font-weight: 700;
+            color: rgba(35, 166, 240, 1);
+            font-size: 16px;
+            letter-spacing: 0.10000000149011612px;
+            /* line-height: 24px; */
+            /* white-space: nowrap; */
+            /* font-style: normal; */
+        }
+
+        .header .headline {
+            /* position: relative; */
+            width: 542px;
+            /* height: 160px; */
+            font-family: "Montserrat-Bold", Helvetica;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 1);
+            font-size: 58px;
+            text-align: center;
+            letter-spacing: 0.2px;
+            line-height: 70px;
+        }
+
+        .header .sub-headline {
+            /* position: relative;
+            width: fit-content; */
+            font-family: "Montserrat-Regular", Helvetica;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 1);
+            font-size: 20px;
+            text-align: center;
+            letter-spacing: 0.2px;
+            line-height: 30px;
+            margin-top: -30px;
+        }
+
+        .header .cta {
+            display: inline-flex;
+            /* align-items: flex-start; */
+            gap: 10px;
+            /* position: relative;
+            flex: 0 0 auto; */
+        }
+
+        .button-md button {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 40px;
+            position: relative;
+            flex: 0 0 auto;
+            background-color: rgba(35, 166, 240, 1);
+            border-radius: 5px;
+            border: none;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .header .btn-text-3 {
+            color: rgba(255, 255, 255, 1);
+            text-align: center;
+            position: relative;
+            width: fit-content;
+            margin-top: -1px;
+            font-family: "Montserrat-Bold", Helvetica;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.20000000298023224px;
+            line-height: 22px;
+            white-space: nowrap;
+            font-style: normal;
+        }
+
+        .header .button {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 40px;
+            position: relative;
+            flex: 0 0 auto;
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid;
+            border-color: rgba(35, 166, 240, 1);
+            all: unset;
+            box-sizing: border-box;
+        }
+
+        .btn-text-4 {
+            color: rgba(35, 166, 240, 1);
+            border: 2px solid rgba(35, 166, 240, 1);
+            background: transparent;
+            text-align: center;
+            width: 150px;
+            border-radius: 5px;
+            margin-top: -1px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.20000000298023224px;
+        }
+
+        .header .row-2 {
+            display: inline-flex;
+            /* align-items: center; */
+            gap: 30px;
+            /* position: relative;
+            flex: 0 0 auto; */
+        }
+
+        .header .col-md {
+            /* display: flex;
+            flex-direction: column; */
+            display: inline-flex;
+            width: 320px;
+            height: 265px;
+            /* align-items: flex-start;
+            position: relative; */
+        }
+
+        .header .card {
+            display: flex;
+            flex-direction: column;
+            width: 328px;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 15px 30px;
+            /* position: relative; */
+            /* flex: 0 0 auto; */
+            background-color: rgba(255, 255, 255, 1);
+            box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
+        }
+
+        .header .fixed-width {
+            position: relative;
+            flex: 0 0 auto;
+        }
+
+        .header .feature-title {
+            position: relative;
+            width: fit-content;
+            font-family: "Montserrat-Bold", Helvetica;
+            font-weight: 700;
+            color: rgba(37, 43, 66, 1);
+            font-size: 16px;
+            letter-spacing: 0.10000000149011612px;
+            line-height: 24px;
+            white-space: nowrap;
+            font-style: normal;
+        }
+
+        .header .fixed-width-fixed {
+            position: relative;
+            width: 50px;
+            height: 2px;
+            background-color: rgba(231, 64, 64, 1);
+        }
+
+        .header .paragraph-feature {
+            position: relative;
+            width: fit-content;
+            font-family: "Montserrat-Regular", Helvetica;
+            font-weight: 400;
+            color: rgba(115, 115, 115, 1);
+            font-size: 14px;
+            letter-spacing: 0.20000000298023224px;
+            line-height: 20px;
+            font-style: normal;
+        }
+
+        .header .card-wrapper {
+            /* display: flex;
+            flex-direction: column;
+            width: 329px;
+            align-items: flex-start;
+            position: relative; */
+            display: inline-flex;
+            width: 320px;
+            height: 265px;
+        }
+
+        .header .card-2 {
+            display: flex;
+            flex-direction: column;
+            width: 328px;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 15px 30px;
+            /* position: relative;
+            flex: 0 0 auto; */
+            background-color: rgba(255, 255, 255, 1);
+            box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
+        }
+
+        .card3 {
+            display: flex;
+            flex-direction: column;
+            width: 328px;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 15px 30px;
+            /* position: relative;
+            flex: 0 0 auto; */
+            background-color: rgba(35, 166, 240, 1);
+            box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
+        }
+
+        .card3 .feature-title {
+            position: relative;
+            width: fit-content;
+            font-family: "Montserrat-Bold", Helvetica;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 1);
+            font-size: 16px;
+            letter-spacing: 0.10000000149011612px;
+            line-height: 24px;
+            white-space: nowrap;
+            font-style: normal;
+        }
+
+        .card3 .fixed-width-fixed {
+            position: relative;
+            width: 50px;
+            height: 2px;
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        .card3 .paragraph-feature {
+            position: relative;
+            width: fit-content;
+            font-family: "Montserrat-Regular", Helvetica;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 1);
+            font-size: 14px;
+            letter-spacing: 0.20000000298023224px;
+            line-height: 20px;
+            font-style: normal;
+        }
+
+        .header .h-feature-title {
+            position: relative;
+            width: fit-content;
+            font-family: "Montserrat-Bold", Helvetica;
+            font-weight: 700;
+            color: rgba(37, 43, 66, 1);
+            font-size: 16px;
+            letter-spacing: 0.10000000149011612px;
+            line-height: 24px;
+            white-space: nowrap;
+            font-style: normal;
+        }
+
+        .header .fixed-width-fixed-2 {
+            position: relative;
+            width: 50px;
+            height: 2px;
+            background-color: rgba(231, 64, 64, 1);
+        }
+
+        .header .p {
+            position: relative;
+            width: fit-content;
+            font-family: "Montserrat-Regular", Helvetica;
+            font-weight: 400;
+            color: rgba(115, 115, 115, 1);
+            font-size: 14px;
+            letter-spacing: 0.20000000298023224px;
+            line-height: 20px;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <div class="header">
+            <div class="container">
+                <div class="navbar-style">
+                    <div class="navbar-brand">
+                        <div class="text-wrapper">BrandName</div>
+                    </div>
+                    <!-- <div class="navbar-toggler"></div> -->
+                    <div class="collapse-navbar">
+                        <div class="navbar-nav">
+                            <div class="li">
+                                <div class="a">
+                                    <div class="link">Home</div>
+                                </div>
+                            </div>
+                            <div class="a-wrapper">
+                                <div class="a">
+                                    <div class="link">Product</div>
+                                </div>
+                            </div>
+                            <div class="div-wrapper">
+                                <div class="a">
+                                    <div class="link">Pricing</div>
+                                </div>
+                            </div>
+                            <div class="div">
+                                <div class="a">
+                                    <div class="link">Contact</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-nav-2">
+                            <div class="nav-item">
+                                <button class="btn-text-wrapper"><button class="btn-text">Login</button></button>
+                            </div>
+                            <div class="button-btn-primary-wrapper">
+                                <div class="button-btn-primary">
+                                    <div class="btn-text-2">JOIN US</div>
+                                    <img class="icn-arrow-right-icn" src="icn-arrow-right-icn-xs.svg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-2">
+                <div class="row">
+                    <div class="main-content">
+                        <div class="header-tag">Welcome</div>
+                        <p class="headline">Selling on the internet like a pro</p>
+                        <p class="sub-headline">
+                            We know how large objects will act, but things on a <br />small scale just do not act that
+                            way.
+                        </p>
+                        <div class="cta">
+                            <div class="button-md">
+                                <button class="btn-text-3">Get Quote Now</button>
+                            </div>
+                            <button class="btn-text-4">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-2">
+                    <div class="col-md">
+                        <div class="card">
+                            <img class="fixed-width" src="fixed-width-2.svg" />
+                            <div class="feature-title">training Courses</div>
+                            <div class="fixed-width-fixed"></div>
+                            <p class="paragraph-feature">
+                                The gradual accumulation of <br />information about atomic and <br />small-scale
+                                behaviour...
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card-wrapper">
+                        <div class="card-2">
+                            <img class="fixed-width" src="fixed-width-1.svg" />
+                            <div class="h-feature-title">2,769 online courses</div>
+                            <div class="fixed-width-fixed-2"></div>
+                            <p class="p">
+                                The gradual accumulation of <br />information about atomic and <br />small-scale
+                                behaviour...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card3">
+                            <img class="fixed-width" src="fixed-width.svg" />
+                            <div class="feature-title">training Courses</div>
+                            <div class="fixed-width-fixed"></div>
+                            <p class="paragraph-feature">
+                                The gradual accumulation of <br />information about atomic and <br />small-scale
+                                behaviour...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
